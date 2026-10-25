@@ -9,6 +9,6 @@ if not exist obj mkdir obj
 echo [1/1] itr2_dlss5_bridge.dll
 cl /nologo /O2 /MT /EHsc /std:c++17 /W3 /GS /Zi /LD /D_CRT_SECURE_NO_WARNINGS bridge.cpp ^
    /Foobj\ /Fdobj\bridge.pdb /Febin\itr2_dlss5_bridge.dll ^
-   /link /DEBUG /OPT:REF /OPT:ICF /PDB:bin\itr2_dlss5_bridge.pdb version.lib user32.lib psapi.lib || exit /b 1
+   /link /DEBUG /OPT:REF /OPT:ICF /PDB:bin\itr2_dlss5_bridge.pdb /PDBALTPATH:itr2_dlss5_bridge.pdb version.lib user32.lib psapi.lib || exit /b 1
 del /q bin\*.exp bin\*.lib 2>nul
 echo bridge build done.
