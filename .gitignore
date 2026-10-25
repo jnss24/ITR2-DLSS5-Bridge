@@ -1,0 +1,9 @@
+# build output
+bin/
+obj/
+*.pdb
+*.obj
+*.exe
+
+# NVIDIA runtime, never committed
+nvngx_dlssnr.dll
